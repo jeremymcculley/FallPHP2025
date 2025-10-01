@@ -1,0 +1,42 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+}
+p,a,li,figcaption,th,td,label,input{
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+.navbar-brand img{
+  height: 80px;
+  width: auto;
+}
+.masthead{
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/sample-image.jpg');
+  background-size: cover;
+}
+.masthead div{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.masthead div h1{
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+}
+.form-row{
+  padding: 5%;
+}
+.form-row h2{
+  font-size: 2.5em;
+}
+.form-row .form-group{
+  margin: 15px 0px;
+}
+.submit-message{
+  text-align: center;
+}
