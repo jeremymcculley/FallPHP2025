@@ -1,0 +1,35 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+h1,h2,h3,h4,h5,h6,th{
+    font-family: 'Montserrat', sans-serif;
+}
+p,li,a,td,figcaption{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+}
+main{
+    padding: 5%;
+}
+.productRow table{
+    table-layout: fixed;
+    vertical-align: middle;
+}
+.productRow table tr td img{
+    width: 100%;
+    height: auto;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 2%;
+    background: #000;
+    width: 100%;
+    text-align: center;
+}
+footer h6{
+    color: #fff;
+}
