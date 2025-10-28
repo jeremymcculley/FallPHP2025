@@ -1,0 +1,37 @@
+body{margin: 0px;}
+.row{
+    margin: 0px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+p,a,li{
+    font-size: 1.2em;
+    font-family: 'fira', sans-serif;
+}
+.lesson-masthead{
+    background-color: #120527;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f8f8;
+    padding: 5% 2%;
+}
+.table-row{
+    padding: 5% 2%;
+}
+.table-row .btn-primary{
+    margin-bottom: 15px;
+}
+.table-row form{
+    width: 50%;
+}
+.table-row img{
+    width: 150px;
+    height: auto;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
