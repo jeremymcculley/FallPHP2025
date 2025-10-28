@@ -27,4 +27,25 @@ class User{
         $stmt->execute->([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    // update a record
+    public function update($id, $name, $email, $image = null){
+        if($image){
+            $sql = "UPDATE {$this->table} SET name=:name, email=:email, image=:image WHERE id=:id";
+            $stmt = $this->conn->prepare($sql);
+            return $stmt->execute([
+                ':name' => $name,
+                ':email' => $email,
+                ':image' => $image,
+                ':id' => $id
+            ]);
+        }else{
+            $sql = "UPDATE {$this->table} SET name=:name, email=:email WHERE id=:id";
+            $stmt = $this->conn->prepare($sql);
+            return $stmt->execute([
+                ':name' => $name,
+                ':email' => $email,
+                ':id' => $id
+            ]);
+        }
+    }
 }
