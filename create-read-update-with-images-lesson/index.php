@@ -1,5 +1,12 @@
 <?php
-
+    $pageTitle = "View Users";
+    $pageDesc = "This page lets us see our users";
+    require 'includes/header.php';
+    require 'includes/database.php';
+    require 'includes/user.php';
+    $db = (new Database())->connect();
+    $user = new User($db);
+    $users = $user->getAll();
 ?>
 <section class="lesson-masthead">
     <h1>Create Read & Update with Images</h1>
@@ -15,21 +22,21 @@
             <th>Image</th>
             <th>Actions</th>
         </tr>
-        <?php  ?>
+        <?php foreach($users as $u): ?>
             <tr>
-                <td><?=  ?></td>
-                <td><?=  ?></td>
-                <td><?=  ?></td>
+                <td><?= $u['id'] ?></td>
+                <td><?= htmlspecialchars($u['name']) ?></td>
+                <td><?= htmlspecialchars($u['email']) ?></td>
                 <td>
-                    <?php  ?>
-                        <img src="uploads/<?=  ?>">
-                    <?php  ?>
+                    <?php if ($u['image']): ?>
+                        <img src="uploads/<?= $u['image'] ?>">
+                    <?php endif; ?>
                 </td>
                 <td>
-                    <a class="btn btn-warning" href="edit.php?id=<?=  ?>">Edit</a>
+                    <a class="btn btn-warning" href="edit.php?id=<?= $u['id'] ?>">Edit</a>
                 </td>
             </tr>
-        <?php  ?>
+        <?php endforeach; ?>
     </table>
 </section>
-<?php  ?>
+<?php require 'includes/footer.php'; ?>

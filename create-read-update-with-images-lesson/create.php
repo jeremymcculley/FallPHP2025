@@ -1,5 +1,11 @@
 <?php
-
+    $pageTitle = "Add User";
+    $pageDesc = "This page will allow you to add a user";
+    require 'includes/header.php';
+    require 'includes/database.php';
+    require 'includes/user.php';
+    $db = (new Database())->connect();
+    $user = new User($db);
 ?>
 <section class="lesson-masthead">
     <h1>Create Read & Update with Images</h1>
